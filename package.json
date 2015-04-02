@@ -1,0 +1,42 @@
+{
+  "name": "ACID-RESTful-OA",
+  "version": "0.1.0",
+  "description": "Test suite webapp for RESTful OA / JSON-LD servers",
+  "author": "Juan Miguel Cejuela",
+  "license": "ISC",
+  "keywords": [
+    "RESTful",
+    "OpenAnnotation",
+    "JSON-LD"
+  ],
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "jayschema": "^0.3.1",
+    "jquery": "^2.1.3",
+    "lodash": "^3.5.0",
+    "react": "^0.13.1",
+    "reactify": "^1.1.0",
+    "request": "^2.53.0",
+    "tv4": "^1.1.8"
+  },
+  "devDependencies": {
+    "jshint": "latest",
+    "jsxhint": "latest",
+    "jscs": "latest",
+    "esprima-fb": "12001.1.0-dev-harmony-fb",
+    "browserify": "latest",
+    "watchify": "latest",
+    "minifyify": "latest"
+  },
+  "browserify": {
+    "transform": [
+      ["reactify", {"es6": true}]
+    ]
+  },
+  "scripts": {
+    "build": "browserify main.js | uglifyjs -c > dist/bundle.min.js",
+    "watch": "watchify main.js -o dist/bundle.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
