@@ -35,7 +35,12 @@ module.exports = React.createClass({
   },
 
   setToBeChecked: function () {
-    this.setState({toBeChecked: this.refs.content.getDOMNode().value});
+    this.setState({
+      toBeChecked: this.refs.content.getDOMNode().value,
+      success: "",
+      errors: "",
+      warnings: ""
+    });
   },
 
   checkAndReact: function (jsonld) {
@@ -65,7 +70,7 @@ module.exports = React.createClass({
          self.setState({
            loaded: true,
            success: "",
-           errors: "The input is wrong or the url could not be requested",
+           errors: "The input is wrong or the url could not be loaded",
            warnings: ""
          });
          return;
