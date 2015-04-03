@@ -9,7 +9,7 @@
     "OpenAnnotation",
     "JSON-LD"
   ],
-  "main": "server.js",
+  "main": "server/main.js",
   "dependencies": {
     "bootstrap": "^3.3.4",
     "express": "^4.12.3",
@@ -42,7 +42,7 @@
   "scripts": {
     "client-build": "browserify client.js | uglifyjs -c > public/dist/bundle.min.js",
     "client-watch": "watchify client.js -o public/dist/bundle.min.js",
-    "server-watch": "runjs server.js",
+    "server-watch": "runjs server/main.js",
     "watch": "npm run server-watch & npm run client-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   }

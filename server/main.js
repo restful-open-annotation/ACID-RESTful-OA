@@ -1,46 +1,41 @@
 "use strict";
 
-var assert = require('assert');
-var _ = require("lodash");
-var request = require("request");
+var express = require('express');
+var app = express();
+//var assert = require('assert');
+//var _ = require("lodash");
+var serverLib = require("./lib.js");
 
 //-------------------------------------------------------------------------
 
-var SCHEMA_PREFIX_URI = "https://raw.githubusercontent.com/restful-open-annotation/schema/master/";
+app.listen(3000);
 
 //-------------------------------------------------------------------------
 
-exports.getJsonSchema = function (callback, schemaName) {
-  schemaName = schemaName || "json-schema-basic.json";
-  var uri = SCHEMA_PREFIX_URI + schemaName;
+app.use("/public", express.static('public'));
 
-  request(uri, function (error, response, body) {
-    if (!error && response.statusCode === 200) {
-      callback(null, {
-        uri: uri,
-        schema: JSON.parse(body) });
-    }
-    else {
-      callback(error);
-    }
-  });
-};
+app.get('/', function (req, res) {
+  res.sendFile("index.html", { root: "./" });
+});
 
-exports.getJson = function (url, callback) {
-  request(url, function (error, response, body) {
-    if (!error && response.statusCode === 200) {
-      var jsonld = body;
-      if (typeof jsonld !== "object") {
-        try {
-          jsonld = JSON.parse(body);
-        } catch (e) {
-          callback(e);
-        }
-      }
-      callback(null, jsonld);
-    }
-    else {
-      callback(error);
-    }
+app.get('/jsonSchema', function (req, res) {
+  serverLib.getJsonSchema(function (error, data) {
+    if (error) { res.status(500).send(error); }
+    else { res.send(data); }
   });
-};
+});
+
+app.get('/get', function (req, res) {
+  var url = req.query.url;
+  if (!url) {
+    res.status(400).send("You must provide a url parameter");
+  }
+  else {
+    serverLib.getJson(
+      url,
+      function (error, data) {
+        if (error) { res.status(400).send(error); }
+        else { res.send(data); }
+      });
+  }
+});
