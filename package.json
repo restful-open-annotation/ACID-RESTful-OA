@@ -9,14 +9,13 @@
     "OpenAnnotation",
     "JSON-LD"
   ],
-  "main": "main.js",
+  "main": "server.js",
   "dependencies": {
     "bootstrap": "^3.3.4",
-    "jayschema": "^0.3.1",
+    "express": "^4.12.3",
     "jquery": "^2.1.3",
     "lodash": "^3.5.0",
     "react": "^0.13.1",
-    "reactify": "^1.1.0",
     "request": "^2.53.0",
     "tv4": "^1.1.8"
   },
@@ -31,12 +30,19 @@
   },
   "browserify": {
     "transform": [
-      ["reactify", {"es6": true}]
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
     ]
   },
   "scripts": {
-    "build": "browserify main.js | uglifyjs -c > dist/bundle.min.js",
-    "watch": "watchify main.js -o dist/bundle.min.js",
+    "client-build": "browserify client.js | uglifyjs -c > public/dist/bundle.min.js",
+    "client-watch": "watchify client.js -o public/dist/bundle.min.js",
+    "server-watch": "runjs server.js",
+    "watch": "npm run server-watch & npm run client-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

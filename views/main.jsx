@@ -2,8 +2,10 @@
 
 var React = require('react');
 
+var SyntaxChecker = require("./SyntaxChecker.jsx");
+
 module.exports = React.createClass({
   render: function () {
-    return <h1>Hello, {this.props.name}!</h1>;
+    return <SyntaxChecker />;
   }
 });
