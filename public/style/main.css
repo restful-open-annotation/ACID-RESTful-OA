@@ -1,3 +1,7 @@
+.main {
+    padding-top: 20px;
+}
+
 textarea {
     width: 100%;
     box-sizing: border-box;

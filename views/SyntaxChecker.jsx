@@ -2,6 +2,7 @@
 
 var _ = require('lodash');
 var React = require('react');
+var Loader = require('react-loader');
 var lib = require('../src/lib.js');
 var $ = require('jquery');
 
@@ -14,14 +15,19 @@ $.get("jsonSchema")
    JSON_SCHEMA_URI = x.uri;
  });
 
-function errorItem(e) {
-  return <li>{e.toString()}</li>;
+function errorItem(e, index) {
+  return <li key={index}>{e.toString()}</li>;
+}
+
+function errorItems(array) {
+  return <ul>{_.map(array, errorItem)}</ul>;
 }
 
 module.exports = React.createClass({
   getInitialState: function () {
     return {
-      toBeChecked: '{"key":"value"}',
+      loaded: true,
+      toBeChecked: "",
       success: "",
       errors: "",
       warnings: ""
@@ -29,41 +35,57 @@ module.exports = React.createClass({
   },
 
   setToBeChecked: function () {
-    this.setState({toBeChecked: this.refs.textarea.getDOMNode().value});
+    this.setState({toBeChecked: this.refs.content.getDOMNode().value});
+  },
+
+  checkAndReact: function (jsonld) {
+    var ret = lib.validateJsonSyntax(jsonld, JSON_SCHEMA_URI);
+
+    this.setState({
+      loaded: true,
+      success: (ret.valid) ? "OK!" : "",
+      errors: errorItems(ret.errors),
+      warnings: errorItems(ret.missing)
+    });
   },
 
   check: function () {
     var self = this;
-    this.setState({result:"loading..."});
-
+    this.setState({loaded:false});
     var submitted = self.state.toBeChecked;
-    var jsonld;
     try {
-      jsonld = JSON.parse(submitted);
+      this.checkAndReact(JSON.parse(submitted));
     } catch (e) {
-      //TODO request GET
-      jsonld = "WRONG";
+      $.get("get", { url: submitted })
+       .done(function (jsonld) {
+         self.setState({ toBeChecked: JSON.stringify(jsonld, null, 2) });
+         self.checkAndReact(jsonld);
+       })
+       .fail(function () {
+         self.setState({
+           loaded: true,
+           success: "",
+           errors: "The input is wrong or the url could not be requested",
+           warnings: ""
+         });
+         return;
+       });
     }
-    var ret = lib.validateJsonSyntax(jsonld, JSON_SCHEMA_URI);
-
-    self.setState({
-      success: (ret.valid) ? "OK!" : "",
-      errors: <ul>{_(ret.errors, errorItem)}</ul>,
-      warnings: <ul>{_(ret.missing, errorItem)}</ul>
-    });
   },
 
   render: function () {
     return (
-      <div className="row">
-        <div className="col-md-8 col-md-offset-2">
-          <div><button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Check</button><span>OA / JSON-LD syntax</span></div>
-          <textarea ref="textarea" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked}/>
-          <div className="result">
-            <div className="success">{this.state.success}</div>
-            <div className="errors">{this.state.errors}</div>
-            <div className="warnings">{this.state.warnings}</div>
-          </div>
+      <div id="syntaxChecker">
+        <div><button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Check</button></div>
+        <textarea ref="content" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked} />
+        <div>
+          <Loader loaded={this.state.loaded} top="120%">
+            <div className="result">
+              <div className="success">{this.state.success}</div>
+              <div className="errors">{this.state.errors}</div>
+              <div className="warnings">{this.state.warnings}</div>
+            </div>
+          </Loader>
         </div>
       </div>
     );

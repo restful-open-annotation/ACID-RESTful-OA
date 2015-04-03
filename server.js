@@ -24,3 +24,18 @@ app.get('/jsonSchema', function (req, res) {
     else { res.send(data); }
   });
 });
+
+app.get('/get', function (req, res) {
+  var url = req.query.url;
+  if (!url) {
+    res.status(400).send("You must provide a url parameter");
+  }
+  else {
+    main.getJson(
+      url,
+      function (error, data) {
+        if (error) { res.status(400).send(error); }
+        else { res.send(data); }
+      });
+  }
+});
