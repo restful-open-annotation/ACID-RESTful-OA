@@ -81,7 +81,7 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div id="syntaxChecker">
-        <div><button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Check</button></div>
+        <div><button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Validate</button></div>
         <textarea ref="content" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked} />
         <div>
           <Loader loaded={this.state.loaded} top="120%">
