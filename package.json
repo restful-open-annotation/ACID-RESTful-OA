@@ -10,6 +10,9 @@
     "JSON-LD"
   ],
   "main": "server/main.js",
+  "engines": {
+    "node": "0.12.x"
+  },
   "dependencies": {
     "bootstrap": "^3.3.4",
     "express": "^4.12.3",
@@ -44,6 +47,7 @@
     "client-watch": "watchify client.js -o public/dist/bundle.min.js",
     "server-watch": "runjs server/main.js",
     "watch": "npm run server-watch & npm run client-watch",
+    "start": "node server/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
