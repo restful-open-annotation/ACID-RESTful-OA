@@ -10,6 +10,10 @@
     "JSON-LD"
   ],
   "main": "server/main.js",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/restful-open-annotation/ACID-RESTful-OA.git"
+  },
   "engines": {
     "node": "0.12.x"
   },
