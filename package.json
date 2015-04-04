@@ -10,7 +10,7 @@
     "JSON-LD"
   ],
   "main": "server/main.js",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/restful-open-annotation/ACID-RESTful-OA.git"
   },
@@ -28,13 +28,14 @@
     "tv4": "^1.1.8"
   },
   "devDependencies": {
+    "browserify": "latest",
+    "esprima-fb": "12001.1.0-dev-harmony-fb",
+    "jscs": "latest",
     "jshint": "latest",
     "jsxhint": "latest",
-    "jscs": "latest",
-    "esprima-fb": "12001.1.0-dev-harmony-fb",
-    "browserify": "latest",
-    "watchify": "latest",
-    "minifyify": "latest"
+    "minifyify": "latest",
+    "reactify": "^1.1.0",
+    "watchify": "latest"
   },
   "browserify": {
     "transform": [
