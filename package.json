@@ -45,6 +45,7 @@
   "scripts": {
     "client-build": "browserify client.js | uglifyjs -c > public/dist/bundle.min.js",
     "client-watch": "watchify client.js -o public/dist/bundle.min.js",
+    "build": "npm run client-build",
     "server-watch": "runjs server/main.js",
     "watch": "npm run server-watch & npm run client-watch",
     "start": "node server/main.js",
