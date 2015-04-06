@@ -89,7 +89,7 @@ module.exports = React.createClass({
           <span>
             {(this.state.seeAPI) ?
              <code style={{fontSize: "80%"}}>{API}</code> :
-             <a style={{float:'right'}} className="label label-default" onClick={function () { self.setState({seeAPI: true}); }}>API</a>
+             <a style={{float:'inherit'}} className="label label-default" onClick={function () { self.setState({seeAPI: true}); }}>API</a>
              }
           </span>
         </div>
