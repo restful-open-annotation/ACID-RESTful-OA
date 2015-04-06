@@ -1,6 +1,6 @@
 {
   "name": "ACID-RESTful-OA",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Test suite webapp for RESTful OA / JSON-LD servers",
   "author": "Juan Miguel Cejuela",
   "license": "ISC",
