@@ -48,6 +48,9 @@ module.exports = React.createClass({
               <a className="navbar-brand" href="#" onClick={function () { self.setState({hash: self.props.initHash}); }}>ACID-RESTful-OA</a>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
+              <ul className="nav navbar-nav">
+                <li><a href="http://restful-open-annotation.github.io/spec/">Specification</a></li>
+              </ul>
             </div>
           </div>
         </nav>
