@@ -81,7 +81,7 @@ module.exports = React.createClass({
 
   render: function () {
     var self = this;
-    var API = 'curl -H "Content-Type: application/json" -X POST -d \'{"your":"json"}\' <this_host>/validate';
+    var API = 'curl -H "Content-Type: application/ld+json" -X POST -d \'{"your":"json"}\' <this_host>/validate';
     return (
       <div id="syntaxChecker">
         <div>
