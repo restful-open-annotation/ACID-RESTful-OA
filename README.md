@@ -1,6 +1,6 @@
 # ACID-RESTful-OA
 
-Webapp for testing [OpenAnnotation (OA) / JSON-LD servers](http://restful-open-annotation.github.io/spec/)
+Webapp for testing [RESTful Open Annotation (OA) / JSON-LD servers](http://restful-open-annotation.github.io/spec/)
 
 **How to use**: https://acid-restful-oa.herokuapp.com/
 
