@@ -73,7 +73,6 @@ app.get('/get', function (req, res) {
 app.post('/testPOST', function (req, res) {
   var url = req.query.url || req.body.url;
   var jsonld = req.body.data || req.body;
-  console.log(url, jsonld);
   if (!url) {
     res.status(400).send("You must provide the endpoint url");
   }
@@ -81,10 +80,9 @@ app.post('/testPOST', function (req, res) {
     res.status(400).send("You must provide the json-ld data");
   }
   else {
-    request.post({url: url, headers: { "Content-Type": "application/ld+json" }, data: jsonld}, function (error, ores, body) {
+    request.post({url: url, headers: { "Content-Type": "application/ld+json" }, body: JSON.stringify(jsonld)}, function (error, ores, body) {
       if (error || ores.statusCode !== 200 || ores.statusCode !== 201) {
-        console.log(error);
-        res.status(200).send({valid: false, errors: [(ores.statusCode + "; could not connect -- " + error)], missing: []});
+        res.status(200).send({valid: false, errors: [("Could not connect: "+ ((ores) ? (ores.statusCode + "; ") : "") + error)], missing: []});
       }
       else {
         var validMsg;
