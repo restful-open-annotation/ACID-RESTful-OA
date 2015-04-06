@@ -2,6 +2,7 @@
 
 var _ = require('lodash');
 var React = require('react');
+var SeeAPI = require('./SeeAPI.jsx');
 var Loader = require('react-loader');
 var lib = require('../src/lib.js');
 var $ = require('jquery');
@@ -30,8 +31,7 @@ module.exports = React.createClass({
       toBeChecked: "",
       success: "",
       errors: "",
-      warnings: "",
-      seeAPI: false
+      warnings: ""
     };
   },
 
@@ -80,18 +80,12 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var self = this;
-    var API = 'curl -H "Content-Type: application/ld+json" -X POST -d \'{"your":"json"}\' <this_host>/validate';
+    //var self = this;
     return (
       <div id="syntaxChecker">
         <div>
           <button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""} style={{margin: "0 3px 3px 0"}}>Validate</button>
-          <span>
-            {(this.state.seeAPI) ?
-             <code style={{fontSize: "80%"}}>{API}</code> :
-             <a style={{float:'inherit'}} className="label label-default" title="Click to see the REST API" onClick={function () { self.setState({seeAPI: true}); }}>API</a>
-             }
-          </span>
+          <SeeAPI API={'curl -H "Content-Type: application/ld+json" -X POST -d \'{"your":"json"}\' <this_host>/validate'} />
         </div>
         <textarea ref="content" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked} />
         <div>
