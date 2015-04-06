@@ -1,6 +1,6 @@
 "use strict";
 
-var assert = require('assert');
+//var assert = require('assert');
 var _ = require("lodash");
 var request = require("request");
 
