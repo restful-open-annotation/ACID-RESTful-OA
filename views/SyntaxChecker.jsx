@@ -30,7 +30,8 @@ module.exports = React.createClass({
       toBeChecked: "",
       success: "",
       errors: "",
-      warnings: ""
+      warnings: "",
+      seeAPI: false
     };
   },
 
@@ -79,9 +80,19 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var self = this;
+    var API = 'curl -H "Content-Type: application/json" -X POST -d \'{"your":"json"}\' <this_host>/validate';
     return (
       <div id="syntaxChecker">
-        <div><button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Validate</button></div>
+        <div>
+          <button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""} style={{margin: "0 3px 3px 0"}}>Validate</button>
+          <span>
+            {(this.state.seeAPI) ?
+             <code style={{fontSize: "80%"}}>{API}</code> :
+             <a style={{float:'right'}} className="label label-default" onClick={function () { self.setState({seeAPI: true}); }}>API</a>
+             }
+          </span>
+        </div>
         <textarea ref="content" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked} />
         <div>
           <Loader loaded={this.state.loaded} top="120%">
