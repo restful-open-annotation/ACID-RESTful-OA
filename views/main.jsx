@@ -79,11 +79,11 @@ module.exports = React.createClass({
 
               <div className="tab-content col-xs-9">
                 {e("#syntaxChecker", function (id) {
-                  return <div id="syntaxChecker" className={"tab-pane "+a(id)}><SyntaxChecker/></div>;})}
-                {e("#TODO", function (id) {
-                  return <div id="POST" className={"tab-pane"+a(id)}><TestPOST/></div>;})}
+                  return <div id={id} className={"tab-pane "+a(id)}><SyntaxChecker/></div>;})}
+                {e("#POST", function (id) {
+                  return <div id={id} className={"tab-pane"+a(id)}><TestPOST/></div>;})}
                 {e("#more", function (id) {
-                  return <div id="more" className={"tab-pane"+a(id)}><h4>Please fill in an <a href="https://github.com/restful-open-annotation/ACID-RESTful-OA/issues">issue</a> for the implementation of more tests. Pull requests are welcome!</h4></div>;})}
+                  return <div id={id} className={"tab-pane"+a(id)}><h4>Please fill in an <a href="https://github.com/restful-open-annotation/ACID-RESTful-OA/issues">issue</a> for the implementation of more tests. Pull requests are welcome!</h4></div>;})}
               </div>
             </div>
           </div>
