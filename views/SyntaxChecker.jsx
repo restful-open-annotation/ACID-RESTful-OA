@@ -82,9 +82,9 @@ module.exports = React.createClass({
   render: function () {
     //var self = this;
     return (
-      <div id="syntaxChecker">
+      <div>
         <div>
-          <button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""} style={{margin: "0 3px 3px 0"}}>Validate</button>
+          <button className="btn btn-success" onClick={this.check} disabled={this.state.toBeChecked === ""}>Validate</button>
           <SeeAPI API={function (origin) { return 'curl -H "Content-Type: application/ld+json" -X POST -d \'{"your":"json"}\' '+origin+'/validate'; }} />
         </div>
         <textarea ref="content" placeholder="Paste here your json-ld or a GET endpoint" onChange={this.setToBeChecked} value={this.state.toBeChecked} />

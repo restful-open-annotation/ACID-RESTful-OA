@@ -2,6 +2,15 @@
     padding-top: 20px;
 }
 
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border:1px solid #999999;
+    width:100%;
+    margin:5px 0;
+    padding:3px;
+}
+
 textarea {
     width: 100%;
     box-sizing: border-box;
