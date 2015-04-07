@@ -81,7 +81,7 @@ app.post('/testPOST', function (req, res) {
   }
   else {
     request.post({url: url, headers: { "Content-Type": "application/ld+json" }, body: JSON.stringify(jsonld)}, function (error, ores, body) {
-      if (error || ores.statusCode !== 200 || ores.statusCode !== 201) {
+      if (error || (ores.statusCode !== 200 && ores.statusCode !== 201)) {
         res.status(200).send({valid: false, errors: [("Could not connect: "+ ((ores) ? (ores.statusCode + "; ") : "") + error)], missing: []});
       }
       else {
