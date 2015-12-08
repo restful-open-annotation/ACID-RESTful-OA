@@ -1,0 +1,362 @@
+{
+  "@context": "http://nlplab.org/ns/restoa-context-20150307.json", 
+  "@graph": [
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134316/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=857,866"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134317/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=868,877"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/545", 
+      "@id": "/oa/annotation/ggp/8134318/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=890,893"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134319/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1118,1127"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134320/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1211,1224"
+    }, 
+    {
+      "body": "GGP", 
+      "@id": "/oa/annotation/ggp/8134321/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1314,1341"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/545", 
+      "@id": "/oa/annotation/ggp/8134322/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1437,1440"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134323/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1454,1463"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134307/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=28,37"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134308/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=228,237"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/545", 
+      "@id": "/oa/annotation/ggp/8134309/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=295,298"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134310/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=396,405"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/545", 
+      "@id": "/oa/annotation/ggp/8134311/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=440,443"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134312/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=447,456"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134313/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=550,559"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134314/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=632,641"
+    }, 
+    {
+      "body": "http://www.ncbi.nlm.nih.gov/gene/1588", 
+      "@id": "/oa/annotation/ggp/8134315/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=643,652"
+    }, 
+    {
+      "body": "Gene_expression", 
+      "@id": "/oa/annotation/trigger/2847326/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=542,549"
+    }, 
+    {
+      "body": "Gene_expression", 
+      "@id": "/oa/annotation/trigger/2847325/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=624,631"
+    }, 
+    {
+      "body": "Positive_regulation", 
+      "@id": "/oa/annotation/trigger/2847329/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1445,1453"
+    }, 
+    {
+      "body": "Positive_regulation", 
+      "@id": "/oa/annotation/trigger/2847320/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=943,952"
+    }, 
+    {
+      "body": "Negative_regulation", 
+      "@id": "/oa/annotation/trigger/2847321/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=818,827"
+    }, 
+    {
+      "body": "Positive_regulation", 
+      "@id": "/oa/annotation/trigger/2847328/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=386,395"
+    }, 
+    {
+      "body": "Positive_regulation", 
+      "@id": "/oa/annotation/trigger/2847324/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=303,311"
+    }, 
+    {
+      "body": "Regulation", 
+      "@id": "/oa/annotation/trigger/2847327/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=17,24"
+    }, 
+    {
+      "body": "Regulation", 
+      "@id": "/oa/annotation/trigger/2847322/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=1201,1207"
+    }, 
+    {
+      "body": "Gene_expression", 
+      "@id": "/oa/annotation/trigger/2847323/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=430,436"
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134313/", 
+        "from": "/oa/annotation/trigger/2847326/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563477.8134313/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=542,549", 
+        "/oa/document/pubmed/17685393/#char=550,559"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134314/", 
+        "from": "/oa/annotation/trigger/2847325/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563476.8134314/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=624,631", 
+        "/oa/document/pubmed/17685393/#char=632,641"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134323/", 
+        "from": "/oa/annotation/trigger/2847329/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563480.8134323/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=1445,1453", 
+        "/oa/document/pubmed/17685393/#char=1454,1463"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134317/", 
+        "from": "/oa/annotation/trigger/2847320/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563470.8134317/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=943,952", 
+        "/oa/document/pubmed/17685393/#char=868,877"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134316/", 
+        "from": "/oa/annotation/trigger/2847321/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563471.8134316/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=818,827", 
+        "/oa/document/pubmed/17685393/#char=857,866"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134310/", 
+        "from": "/oa/annotation/trigger/2847328/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563479.8134310/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=386,395", 
+        "/oa/document/pubmed/17685393/#char=396,405"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/trigger/2847324/", 
+        "from": "/oa/annotation/trigger/2847324/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/event_argument/4563481.4563479/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=303,311", 
+        "/oa/document/pubmed/17685393/#char=386,395"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134309/", 
+        "from": "/oa/annotation/trigger/2847324/", 
+        "type": "Cause"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563481.8134309/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=303,311", 
+        "/oa/document/pubmed/17685393/#char=295,298"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134307/", 
+        "from": "/oa/annotation/trigger/2847327/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563478.8134307/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=17,24", 
+        "/oa/document/pubmed/17685393/#char=28,37"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134320/", 
+        "from": "/oa/annotation/trigger/2847322/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563472.8134320/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=1201,1207", 
+        "/oa/document/pubmed/17685393/#char=1211,1224"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134311/", 
+        "from": "/oa/annotation/trigger/2847323/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563474.8134311/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=430,436", 
+        "/oa/document/pubmed/17685393/#char=440,443"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134312/", 
+        "from": "/oa/annotation/trigger/2847323/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563473.8134312/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=430,436", 
+        "/oa/document/pubmed/17685393/#char=447,456"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134310/", 
+        "from": "/oa/annotation/trigger/2847324/", 
+        "type": "Theme"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563475.8134310/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=303,311", 
+        "/oa/document/pubmed/17685393/#char=396,405"
+      ]
+    }, 
+    {
+      "body": {
+        "to": "/oa/annotation/ggp/8134309/", 
+        "from": "/oa/annotation/trigger/2847324/", 
+        "type": "Cause"
+      }, 
+      "@id": "/oa/annotation/ggp_argument/4563475.8134309/", 
+      "@type": "oa:Annotation", 
+      "target": [
+        "/oa/document/pubmed/17685393/#char=303,311", 
+        "/oa/document/pubmed/17685393/#char=295,298"
+      ]
+    }, 
+    {
+      "body": "http://purl.obolibrary.org/obo/IAO_0000314", 
+      "@id": "/oa/annotation/section/17685393.TITLE/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=0,84"
+    }, 
+    {
+      "body": "http://purl.obolibrary.org/obo/IAO_0000314", 
+      "@id": "/oa/annotation/section/17685393.ABSTRACT/", 
+      "@type": "oa:Annotation", 
+      "target": "/oa/document/pubmed/17685393/#char=85,1562"
+    }
+  ], 
+  "@id": "/oa/document/pubmed/17685393/annotations/"
+}
